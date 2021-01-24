@@ -9,6 +9,7 @@ public class FirstPersonController : MonoBehaviour, IPowered
                             INPUT_MOVE_Z = "Vertical",
                             INPUT_JUMP = "Jump";
 
+    [Space(10)]
     [Header("Habilidades para las físicas")]
 #if UNITY_EDITOR
     [Multiline]
@@ -16,6 +17,7 @@ public class FirstPersonController : MonoBehaviour, IPowered
 #endif
     [SerializeField] private Ability[] abilities;
     
+    [Space(10)]
     [Header("Detección del suelo")]
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundMask;

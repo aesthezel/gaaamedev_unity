@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class PrefabPowerUp : MonoBehaviour
 {
+    [SerializeField] Text floatingText;
     [SerializeField] private string powerUpType;
     [SerializeField] private float changeValue;
     [SerializeField] private int timeEffectMilliseconds;
@@ -11,19 +13,10 @@ public class PrefabPowerUp : MonoBehaviour
     #endregion
 
     #region MonoBehaviour API
-    private void Awake()
-    {
-        
-    }
 
     private void Start()
     {
-        
-    }
-
-    private void Update()
-    {
-        
+        floatingText.text = $"<b>{powerUpType}</b> ({changeValue})";
     }
 
     private void OnCollisionEnter(Collision other) 
